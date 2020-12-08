@@ -1,0 +1,168 @@
+<ion-header>
+    <ion-toolbar [ngClass]="pt_active? 'ios_active':'ad_active'">
+        <ion-buttons slot="start" (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-buttons>
+        <ion-title>Child Daily Information</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list class="childDaily">
+        <ion-list class="childDaily__list">
+            <ion-text class="childDaily__title">How often to eat</ion-text>
+            <ion-radio-group value="0 Times" (ionChange)="getData($event.detail.value)">
+                <ion-list class="childDaily__radio">
+                    <ion-item class="childDaily__radio-item ion-no-padding" lines="none">
+                        <ion-radio class="childDaily__rdo" value="0 Times"></ion-radio>
+                        <ion-img class="icon childDaily__selected" [ngClass]="this.eat=='0 Times' ? 'childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                        <ion-label class="childDaily__label" [ngClass]="this.eat=='0 Times' ? 'childDaily__label--check' : 'normal'">
+                            0 Times
+                        </ion-label>
+                    </ion-item>
+                    <ion-item class="childDaily__radio-item ion-no-padding" lines="none">
+                        <ion-radio class="childDaily__rdo" value="1 Times"></ion-radio>
+                        <ion-img class="icon childDaily__selected" [ngClass]="this.eat=='1 Times' ? 'childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                        <ion-label class="childDaily__label" [ngClass]="this.eat=='1 Times' ? 'childDaily__label--check' : 'normal'">
+                            1 Times
+                        </ion-label>
+                    </ion-item>
+                    <ion-item class="childDaily__radio-item ion-no-padding" lines="none">
+                        <ion-radio class="childDaily__rdo " value="2 Times"></ion-radio>
+                        <ion-img class="icon childDaily__selected" [ngClass]="this.eat=='2 Times' ? 'childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                        <ion-label class="childDaily__label" [ngClass]="this.eat=='2 Times' ? 'childDaily__label--check' : 'normal'">
+                            2 Times
+                        </ion-label>
+                    </ion-item>
+                    <ion-item class="childDaily__radio-item ion-no-padding" lines="none">
+                        <ion-radio class="childDaily__rdo" value="3 Times"></ion-radio>
+                        <ion-img class="icon childDaily__selected" [ngClass]="this.eat=='3 Times' ? 'childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                        <ion-label class="childDaily__label" [ngClass]="this.eat=='3 Times' ? 'childDaily__label--check' : 'normal'">
+                            3 Times
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-radio-group>
+            <ion-list class="childDaily__stick">
+                <ion-text class="childDaily__text">
+                    “Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book .....”
+                </ion-text>
+                <ion-label class="childDaily__assign">
+                    - Ahmed Mohsen
+                </ion-label>
+            </ion-list>
+        </ion-list>
+        <ion-list class="childDaily__list">
+            <ion-text class="childDaily__title">The menu of the day</ion-text>
+            <ion-list class="childDaily__menu-list">
+                <ion-item class="childDaily__menu-item ion-no-padding" lines="none">
+                    <ion-checkbox class="childDaily__rdo" value="Cheese Sandwitch" (ionChange)="setChecked1($event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon childDaily__selected" [ngClass]="this.check1 ? 'childDaily__selected childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="childDaily__menu-text" [ngClass]="this.check1 ? 'childDaily__menu-text--check' : 'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-sandwitch.png"></ion-img>
+                        <ion-text>
+                            Cheese Sandwitch
+                        </ion-text>
+                    </ion-list>
+                </ion-item>
+                <ion-item class="childDaily__menu-item ion-no-padding" lines="none">
+                    <ion-checkbox class="childDaily__rdo" value="Banana" (ionChange)="setChecked2($event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon childDaily__selected" [ngClass]="this.check2 ? 'childDaily__selected childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="childDaily__menu-text" [ngClass]="this.check2 ? 'childDaily__menu-text--check' : 'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-banana.png"></ion-img>
+                        <ion-text>
+                            Banana
+                        </ion-text>
+                    </ion-list>
+                </ion-item>
+                <ion-item class="childDaily__menu-item ion-no-padding" lines="none">
+                    <ion-checkbox class="childDaily__rdo" value="Apple" (ionChange)="setChecked3($event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon childDaily__selected" [ngClass]="this.check3 ? 'childDaily__selected childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="childDaily__menu-text" [ngClass]="this.check3 ? 'childDaily__menu-text--check' : 'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-apple.png"></ion-img>
+                        <ion-text>
+                            Apple
+                        </ion-text>
+                    </ion-list>
+                </ion-item>
+                <ion-item class="childDaily__menu-item ion-no-padding" lines="none">
+                    <ion-checkbox class="childDaily__rdo" value="Mango Juice" (ionChange)="setChecked4($event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon childDaily__selected" [ngClass]="this.check4 ? 'childDaily__selected childDaily__selected--show' : 'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="childDaily__menu-text" [ngClass]="this.check4 ? 'childDaily__menu-text--check' : 'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-mangojuice.png"></ion-img>
+                        <ion-text>
+                            Mango Juice
+                        </ion-text>
+                    </ion-list>
+                </ion-item>
+            </ion-list>
+            <ion-list class="childDaily__stick">
+                <ion-text class="childDaily__text">
+                    “Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book .....”
+                </ion-text>
+                <ion-label class="childDaily__assign childDaily__assign--blue">
+                    - Ahmed Mohsen
+                </ion-label>
+            </ion-list>
+        </ion-list>
+        <ion-list class="childDaily__list">
+            <ion-text class="childDaily__title">Nap time:</ion-text>
+            <ion-list class="childDaily__radio ion-no-padding">
+                <ion-item class="childDaily__input ion-no-padding" lines="none">
+                    <ion-label position="floating" class="label label--blue label--top">Duration</ion-label>
+                    <ion-select class="childDaily__input-text input input--small childDaily__select" value="1" placeholder="Select">
+                        <ion-select-option value="1" selected>1 Hour</ion-select-option>
+                        <ion-select-option value="2">2 Hour</ion-select-option>
+                        <ion-select-option value="2">3 Hour</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item class="childDaily__input ion-margin-start" lines="none">
+                    <ion-label position="floating" class="label label--blue label--top">Time the child slept</ion-label>
+                    <ion-select class="childDaily__input-text input input--small childDaily__select" value="2" placeholder="Select">
+                        <ion-select-option value="1" selected>02:00 PM : 03:00 PM</ion-select-option>
+                        <ion-select-option value="2">03:00 PM : 04:00 PM</ion-select-option>
+                        <ion-select-option value="2">04:00 PM : 05:00 PM</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+        <ion-list class="childDaily__list">
+            <ion-text class="childDaily__title">Bowel movement:</ion-text>
+            <ion-list class="childDaily__radio childDaily__radio-padding">
+                <ion-item class="childDaily__radio-item childDaily__radio-item-yes ion-no-padding" lines="none">
+                    <ion-img class="icon icon--selected childDaily__selected childDaily__selected--show" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-label class="childDaily__label childDaily__label--check childDaily__label-yes">Yes</ion-label>
+                    <ion-radio class="childDaily__rdo" value="yes"></ion-radio>
+                </ion-item>
+                <ion-item class="childDaily__radio-item childDaily__radio-item-yes label--right ion-no-padding" lines="none">
+                    <ion-label class="childDaily__label childDaily__label--check  childDaily__label-yes label--right">3 Times</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+        <ion-list class="childDaily__list">
+            <ion-text class="childDaily__title">Record injuries:</ion-text>
+            <ion-radio-group>
+                <ion-list class="childDaily__radio childDaily__radio-padding">
+                    <ion-item class="childDaily__radio-item childDaily__radio-item-yes ion-no-padding" lines="none">
+                        <ion-img class="icon icon--selected childDaily__selected childDaily__selected--show" src="assets/images/icon-selected.png"></ion-img>
+                        <ion-label class="childDaily__label childDaily__label--check childDaily__label-yes">Yes</ion-label>
+                        <ion-radio class="childDaily__rdo" value="yes"></ion-radio>
+                    </ion-item>
+                    <ion-item class="childDaily__input ion-margin-start" lines="none">
+                        <ion-label position="floating" class="label label--blue label--top">Where</ion-label>
+                        <ion-input class="input input--small" placeholder="Write here" type="text" value="Twinky Finger"></ion-input>
+                        <ion-radio class="childDaily__rdo" value="yes"></ion-radio>
+                    </ion-item>
+                    <ion-item class="childDaily__input ion-margin-start" lines="none">
+                        <ion-label position="floating" class="label label--blue label--top">When</ion-label>
+                        <ion-select class="childDaily__input-text input input--small childDaily__select" value="2" placeholder="Select">
+                            <ion-select-option value="1">10:00 AM</ion-select-option>
+                            <ion-select-option value="2">11:00 AM</ion-select-option>
+                            <ion-select-option value="2">12:00 AM</ion-select-option>
+                        </ion-select>
+
+                    </ion-item>
+                </ion-list>
+            </ion-radio-group>
+        </ion-list>
+    </ion-list>
+</ion-content>

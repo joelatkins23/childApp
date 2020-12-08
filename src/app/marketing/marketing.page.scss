@@ -1,0 +1,52 @@
+ion-header {
+    background-image: url('../../assets/images/bg-header.png');
+    background-size: cover;
+}
+
+ion-title {
+    text-align: center;
+    color: #fff;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+ion-buttons ion-icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+.market {
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.market_header {
+    color: #4c4c4c;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+.market_title {
+    color: #4f4f4f;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+.market_textarea {
+    font-size: 14px;
+    color: #a3a3a3;
+    border: 1px solid #d7d7d7;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.btn-market {
+    --background: #187bad;
+    width: 100%;
+    color: white;
+    text-transform: initial;
+    font-size: 16px;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}

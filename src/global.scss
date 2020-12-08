@@ -9,18 +9,135 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+ion-back-button {
+    position: absolute;
+    font-size: 100%;
+}
+
+.ios_active {
+    padding-top: 16px !important;
+}
+
+.ad_active {
+    padding-top: 0px !important;
+}
+
+body {
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+p {
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+ion-toolbar {
+    --background: transparent;
+}
+
+$text-input-md-show-success-highlight: false;
+$text-input-md-show-error-highlight: false;
+ion-icon.sc-ion-back-button-md,
+ion-icon.sc-ion-back-button-ios {
+    font-size: 25px;
+}
+
+.button-text.sc-ion-back-button-md,
+.button-text.sc-ion-back-button-ios {
+    font-size: 20px;
+}
+
+.native-input.sc-ion-input-md {
+    font-size: 14px;
+}
+
+.header-md:after,
+.header-ios:after {
+    background-image: none;
+}
+
+.header-ios ion-toolbar:last-child,
+.header-md ion-toolbar:last-child {
+    --border-width: 0 0 0px;
+    padding-top: 16px;
+}
+
+ion-item {
+    --border-width: 0px;
+    .item-native {
+        padding-right: 15px !important;
+    }
+}
+
+ion-item .item-inner {
+    padding-right: 0 !important;
+}
+
+ion-label,
+ion-text {
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+.modal-wrapper {
+    border-radius: 20px !important;
+}
+
+.item-has-value {
+    border-width: 0px !important;
+}
+
+.item-has-focus {
+    --border: none !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-0 {
+    margin-top: 0px !important;
+}
+
+ion-modal {
+    width: 100%;
+    padding: 85px 30px;
+    height: 100%;
+}
+
+.item.sc-ion-label-md-h,
+.item .sc-ion-label-md-h {
+    --color: initial;
+    display: block;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: unset;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

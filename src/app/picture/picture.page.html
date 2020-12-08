@@ -1,0 +1,231 @@
+<ion-header>
+    <ion-toolbar [ngClass]="pt_active? 'ios_active':'ad_active'">
+        <ion-buttons slot="start">
+            <ion-icon name="arrow-back" *ngIf="!deleteitems" (click)="goBack()"></ion-icon>
+            <ion-icon name="close" *ngIf="deleteitems" (click)="close()"></ion-icon>
+        </ion-buttons>
+        <ion-title>{{title}}</ion-title>
+        <ion-buttons slot="end" *ngIf="deleteitems">
+            <ion-icon name="trash"></ion-icon>
+            <ion-icon name="md-more"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list class="picture_list mb-15">
+        <ion-grid>
+            <ion-grid>
+                <ion-col size="12">
+                    <ion-text class="date_text">5 June 2020</ion-text>
+                </ion-col>
+            </ion-grid>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(1, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected " [ngClass]="found(1) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list " [ngClass]="found(1) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(2, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(2) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(2) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select2.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(3, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(3) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(3) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select3.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(4, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(4) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(4) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select4.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+    <ion-list class="picture_list mb-15">
+        <ion-grid>
+            <ion-grid>
+                <ion-col size="12">
+                    <ion-text class="date_text">6 May 2019</ion-text>
+                </ion-col>
+            </ion-grid>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(5, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(5) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(5) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(6, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(6) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(6) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select2.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(7, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(7) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(7) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select3.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(8, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(8) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(8) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select4.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+    <ion-list class="picture_list mb-15">
+        <ion-grid>
+            <ion-grid>
+                <ion-col size="12">
+                    <ion-text class="date_text">6 May 2019</ion-text>
+                </ion-col>
+            </ion-grid>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(9, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(9) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(9) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(10, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(10) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(10) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select2.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(11, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(11) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(11) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select3.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(12, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(12) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(12) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select4.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(13, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(13) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(13) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(14, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(14) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(14) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select2.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(15, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(15) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(15) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select3.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(16, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(16) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(16) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select4.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+    <ion-list class="picture_list mb-15">
+        <ion-grid>
+            <ion-grid>
+                <ion-col size="12">
+                    <ion-text class="date_text">6 May 2019</ion-text>
+                </ion-col>
+            </ion-grid>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(17, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(17) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(17) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(18, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(18) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(18) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select2.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(19, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(19) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(19) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select3.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(20, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(20) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(20) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select4.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(21, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(21) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(21) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(22, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(22) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(22) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select2.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(23, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(23) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(23) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select3.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-checkbox class="picture__rdo" (ionChange)="setChecked(24, $event.detail.checked)"></ion-checkbox>
+                    <ion-img class="icon picture_selected" [ngClass]="found(24) ? 'picture_selected--show':'normal'" src="assets/images/icon-selected.png"></ion-img>
+                    <ion-list class="picture_item_list" [ngClass]="found(24) ? 'picture_item_list--selected':'normal'">
+                        <ion-img class="img img--fruit" src="assets/images/img-select4.png"></ion-img>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+</ion-content>

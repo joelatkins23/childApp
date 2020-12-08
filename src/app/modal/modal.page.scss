@@ -1,0 +1,79 @@
+ion-toolbar {
+    padding-top: 0px !important;
+}
+
+ion-header {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.icon_close {
+    background: #187bad;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.modal_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.modal_item_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-modal {
+    font-size: 13px;
+    text-transform: initial;
+    margin-left: auto;
+    --background: #187bad;
+    --border-radius: unset;
+    --ion-font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+.disable {
+    --background: #cacaca !important;
+}
+
+.item_clock {
+    color: #929292;
+    font-size: 14px;
+}
+
+.clock_img {
+    max-width: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.btn-modal-cofirm {
+    width: 100%;
+    font-size: 16px;
+    text-transform: initial;
+    margin-left: auto;
+    --background: #187bad;
+    --border-radius: unset;
+    --ion-font-family: "Century Gothic Regular", sans-serif !important;
+    margin-bottom: 30px;
+}
+
+.modal_submit {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}

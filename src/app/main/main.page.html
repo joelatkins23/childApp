@@ -1,0 +1,47 @@
+<ion-content>
+    <div class="bg">
+        <ion-header>
+            <ion-toolbar [ngClass]="pt_active? 'ios_active':'ad_active'">
+                <ion-title>HOME</ion-title>
+                <ion-buttons slot="end">
+                    <img src="../../assets/images/icon-notification.png" alt="">
+                    <ion-badge>1</ion-badge>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-header>
+        <div class="items">
+            <div class="cell" (click)="goto('profile')">
+                <img src="../../assets/images/icon-myprofile.png" alt="">
+                <p>My profile</p>
+            </div>
+            <div class="cell" (click)="goto('messages')">
+                <img src="../../assets/images/icon-mymessage.png" alt="">
+                <p>My Messages</p>
+            </div>
+            <div class="cell" (click)="goto('picture')">
+                <img src="../../assets/images/icon-mypicture.png" alt="">
+                <p>My Pictures</p>
+            </div>
+            <div class="cell" (click)="goto('dailyinfomation')">
+                <img src="../../assets/images/icon-infochild.png" alt="">
+                <p>Child Daily information</p>
+            </div>
+            <div class="cell" (click)="goto('school')">
+                <img src="../../assets/images/icon-document.png" alt="">
+                <p>School Documents</p>
+            </div>
+            <div class="cell" (click)="goto('appointment')">
+                <img src="../../assets/images/icon-appointment.png" alt="">
+                <p>Appointment Center</p>
+            </div>
+            <div class="cell" (click)="goto('marketing')">
+                <img src="../../assets/images/icon-marketing.png" alt="">
+                <p>Marketing</p>
+            </div>
+            <div class="cell" (click)="goto('home')">
+                <img src="../../assets/images/icon-minigroup.png" alt="">
+                <p>Mini club</p>
+            </div>
+        </div>
+    </div>
+</ion-content>

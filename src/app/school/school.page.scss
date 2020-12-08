@@ -1,0 +1,51 @@
+ion-header {
+    background-image: url('../../assets/images/bg-header.png');
+    background-size: cover;
+}
+
+ion-title {
+    text-align: center;
+    color: #fff;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+ion-buttons ion-icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+ion-item {
+    --border-width: 0px;
+    margin-right: 15px;
+    --inner-padding-end: 0px;
+}
+
+ion-grid {
+    .school_text {
+        color: #4c4c4c;
+        font-weight: 600;
+        font-size: 16px;
+        display: flex;
+        padding-top: 5px;
+        font-family: "Century Gothic Regular", sans-serif !important;
+    }
+    .brage {
+        background: #f33232;
+        color: white;
+        margin-left: 10px;
+        border-radius: 5px;
+        padding: 0px 10px;
+        font-weight: 400;
+        font-family: "Century Gothic Regular", sans-serif !important;
+    }
+}
+
+ion-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ion-col img {
+    max-width: 30px;
+    width: 100%;
+}

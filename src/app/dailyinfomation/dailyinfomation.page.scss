@@ -1,0 +1,259 @@
+ion-header {
+    background-image: url('../../assets/images/bg-header.png');
+    background-size: cover;
+}
+
+ion-title {
+    text-align: center;
+    color: #fff;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+ion-buttons ion-icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+.img {
+    max-width: 50px;
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+// child daily ìno center
+.childDaily {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 10px;
+    margin-bottom: 50px;
+    &__list {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        color: #4f4f4f;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__radio {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px 0 0;
+        margin: 5px 0;
+        height: 68px;
+        &-padding {
+            padding-top: 10px;
+        }
+        &--big {
+            height: 100%;
+        }
+    }
+    &__radio-item {
+        width: 23%;
+        position: relative;
+        --inner-padding-end: 0;
+        overflow: visible;
+        &::part(native) {
+            height: 100%;
+        }
+        &-yes {
+            height: 55px;
+            margin-right: 10px;
+        }
+    }
+    // &__itemRdo {
+    //   border: 1px solid #d7d7d7;
+    //   border-radius: 10px;
+    //   --inner-padding-end: 0;
+    //   &::part(native) {
+    //     padding: 0;
+    //   }
+    // }
+    &__label {
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        margin: 0;
+        font-size: inherit;
+        color: #9c9c9c !important;
+        font-weight: 400;
+        text-align: center;
+        position: absolute;
+        border: 1px solid #d7d7d7;
+        border-radius: 10px;
+        font-family: "Century Gothic Regular", sans-serif !important;
+        &--check {
+            border: 1px solid #187bad;
+        }
+        &-yes {
+            height: 55px;
+            line-height: 56px;
+        }
+    }
+    &__select {
+        margin-bottom: 20px;
+        padding-right: 0;
+        &::part(icon) {
+            opacity: 0;
+        }
+    }
+    &__selected {
+        width: 30px;
+        position: absolute;
+        z-index: 99;
+        top: -10px;
+        right: -10px;
+        display: none;
+        &--show {
+            display: block;
+        }
+    }
+    &__stick {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        font-size: 14px;
+        color: #a3a3a3;
+        padding: 10px;
+        background: #f6f6f6;
+        border: 1px solid #d7d7d7;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+    &__assign {
+        color: #323131;
+        font-weight: 600;
+        margin-top: 10px;
+        &--blue {
+            color: #187bad;
+        }
+    }
+    // &__label2 {
+    //   font-size: 14px;
+    //   color: #9c9c9c;
+    //   font-weight: 400;
+    //   text-align: center;
+    // }
+    &__rdo {
+        opacity: 0;
+        // position: absolute;
+    }
+    &__comment {
+        font-size: 14px;
+        color: #a3a3a3;
+        border: 1px solid #d7d7d7;
+        height: 80px;
+        padding: 5px;
+        margin: 10px 0;
+        border-radius: 10px;
+        & .native-textarea {
+            height: 130px;
+        }
+    }
+    &__radio-height {
+        height: 95px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    &__list-day {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+    }
+    &__input {
+        border: 1px solid #d7d7d7 !important;
+        border-radius: 5px;
+        color: #8b8b8b;
+        font-size: 14px;
+        height: 55px;
+        // --inner-padding-start: 20px;
+        &-width {
+            width: 40%;
+            --inner-padding-end: 0;
+        }
+        &-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: #8b8b8b;
+            font-family: "Century Gothic Regular", sans-serif !important;
+        }
+    }
+    &__menu-list {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin: 5px 0;
+        padding: 10px 10px 10px 0;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    &__menu-item {
+        width: 23%;
+        height: 95px;
+        --inner-padding-end: 0;
+        overflow: visible;
+        position: relative;
+        --min-height: 100% !important;
+        &::part(native) {
+            height: 100%;
+        }
+        .item-native {
+            --height: 100% !important;
+        }
+    }
+    &__menu-text {
+        width: 100%;
+        height: 95px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: unset;
+        text-align: center;
+        position: absolute;
+        color: #565656;
+        font-size: 13px;
+        font-weight: 600;
+        border: 1px solid #d7d7d7;
+        border-radius: 10px;
+        &--check {
+            border: 1px solid #187bad;
+        }
+    }
+}
+
+.img--fruit {
+    max-width: 45px;
+    margin-bottom: 5px;
+}
+
+.list-day__item {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    color: #4f4f4f;
+    font-size: 14px;
+}
+
+.label--blue {
+    color: #187bad !important;
+    font-weight: 600;
+}
+
+.label--right {
+    margin-right: auto;
+}

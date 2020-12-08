@@ -1,0 +1,89 @@
+ion-header {
+    background-image: url('../../assets/images/bg-header.png');
+    background-size: cover;
+}
+
+ion-title {
+    text-align: center;
+    color: #fff;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+ion-buttons ion-icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+ion-avatar {
+    width: 50px;
+    height: 50px;
+}
+
+ion-item {
+    margin-right: 15px;
+    --inner-padding-end: 0px;
+}
+
+.r_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+    width: calc(100% - 50px);
+    margin-left: 10px;
+}
+
+.massages_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 10px;
+    font-family: "Century Gothic Regular", sans-serif !important;
+    ion-text {
+        color: #187bad;
+        width: 80%;
+        display: flex;
+        font-size: 14px;
+    }
+    ion-label {
+        color: #8d8d8d;
+        font-size: 14px;
+        display: inherit;
+    }
+    .msg_time {
+        color: #187bad !important;
+        text-align: right;
+        font-size: 14px;
+    }
+}
+
+ion-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.massages_des {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 10px;
+    font-family: "Century Gothic Regular", sans-serif !important;
+    ion-text {
+        color: #8d8d8d;
+        width: 80%;
+        display: flex;
+        font-size: 14px;
+    }
+    img {
+        width: 25px;
+    }
+}

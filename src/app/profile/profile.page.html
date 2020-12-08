@@ -1,0 +1,286 @@
+<ion-content>
+    <div class="bg">
+        <ion-header [ngClass]="pt_active? 'ios_active':'ad_active'">
+            <ion-toolbar>
+                <ion-buttons slot="start" (click)="goBack()">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </ion-buttons>
+                <ion-title>My Profile</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-list class="profile_avata-box">
+            <ion-input type="file" class="photo_upload" (change)="changeListener($event)"></ion-input>
+            <ion-fab class="camera_pos" vertical="top" horizontal="end" edge slot="fixed">
+                <ion-fab-button class="camera_btn">
+                    <ion-img class="camera_img" [src]="this.camera"></ion-img>
+                </ion-fab-button>
+            </ion-fab>
+            <ion-avatar>
+                <ion-img  [src]="this.profileimg"></ion-img>
+            </ion-avatar>
+        </ion-list>
+        <ion-fab class="edit_pos" vertical="top" horizontal="end" edge slot="fixed" (click)="change_edit(1)" *ngIf="!edit_status">
+            <ion-fab-button class="camera_btn">
+                <ion-img class="camera_img" [src]="this.edit"></ion-img>
+            </ion-fab-button>
+        </ion-fab>
+        <ion-fab class="edit_pos" vertical="top" horizontal="end" edge slot="fixed" (click)="change_edit(0)" *ngIf="edit_status">
+            <ion-fab-button class="camera_btn">
+                <ion-img class="camera_img" [src]="this.close"></ion-img>
+            </ion-fab-button>
+        </ion-fab>
+    </div>
+    <ion-list class="profile_content">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label class="picture_title">
+                        Basic information
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Fisrt name of child</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Last name of child</ion-label>
+                    <ion-input type="text" value="Ahmed"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Fisrt name of child</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Last name of child</ion-label>
+                    <ion-input type="text" value="Ahmed"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-label class="input_label">Nationality</ion-label>
+                    <ion-select value="f" placeholder="Nationality">
+                        <ion-select-option value="f">Pakistani</ion-select-option>
+                        <ion-select-option value="m">Vietnam</ion-select-option>
+                    </ion-select>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Name of the class</ion-label>
+                    <ion-select value="f" placeholder="Name of the class">
+                        <ion-select-option value="f" selected>Bamboo</ion-select-option>
+                        <ion-select-option value="m">Bamboo 2</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label class="input_label">Address</ion-label>
+                    <ion-input type="text" value="3th Capital Street, karachi, Pakistan"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Mother’s first name</ion-label>
+                    <ion-input type="text" value="Neha"></ion-input>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-label class="input_label">Mother’s last name</ion-label>
+                    <ion-input type="text" value="Mahdy"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Mother’s phone number</ion-label>
+                    <ion-input type="text" value="Neha"></ion-input>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-label class="input_label">Mother’s email</ion-label>
+                    <ion-input type="text" value="Mahdy"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-label class="input_label"> Father’s phone number</ion-label>
+                    <ion-input type="text" value="Neha"></ion-input>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-label class="input_label">Father’s email</ion-label>
+                    <ion-input type="text" value="Mahdy"></ion-input>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label class="picture_title">
+                        Emergency contact
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4">
+                    <ion-label class="input_label">Name</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Email</ion-label>
+                    <ion-input type="text" value="ali@gmail.com"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Phone</ion-label>
+                    <ion-input type="text" value="+02 255 3273"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4">
+                    <ion-label class="input_label">Name</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Email</ion-label>
+                    <ion-input type="text" value="ali@gmail.com"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Phone</ion-label>
+                    <ion-input type="text" value="+02 255 3273"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4">
+                    <ion-label class="input_label">Name</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Email</ion-label>
+                    <ion-input type="text" value="ali@gmail.com"></ion-input>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Phone</ion-label>
+                    <ion-input type="text" value="+02 255 3273"></ion-input>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label class="picture_title">
+                        Pick up authorization person
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-label class="input_label">First Name</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Last Name</ion-label>
+                    <ion-input type="text" value="Mohamed"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Photo</ion-label>
+                    <ion-input class="file_input" type="file" value="ali@gmail.com"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Phone</ion-label>
+                    <ion-input type="text" value="+02 255 3273"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-label class="input_label">First Name</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Last Name</ion-label>
+                    <ion-input type="text" value="Mohamed"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Photo</ion-label>
+                    <ion-input class="file_input" type="file" value="ali@gmail.com"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Phone</ion-label>
+                    <ion-input type="text" value="+02 255 3273"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-label class="input_label">First Name</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Last Name</ion-label>
+                    <ion-input type="text" value="Mohamed"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Photo</ion-label>
+                    <ion-input class="file_input" type="file" value="ali@gmail.com"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Phone</ion-label>
+                    <ion-input type="text" value="+02 255 3273"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="3">
+                    <ion-label class="input_label">First Name</ion-label>
+                    <ion-input type="text" value="Ali"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Last Name</ion-label>
+                    <ion-input type="text" value="Mohamed"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Photo</ion-label>
+                    <ion-input class="file_input" type="file" value="ali@gmail.com"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <ion-label class="input_label">Phone</ion-label>
+                    <ion-input type="text" value="+02 255 3273"></ion-input>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label class="picture_title">
+                        Childs Health details
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4">
+                    <ion-label class="input_label">Allergies</ion-label>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Food restrictions</ion-label>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-label class="input_label">Any health issues ?</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row class="mt-0">
+                <ion-col size="4">
+                    <ion-textarea rows="3" cols="20" placeholder="Write Comment"></ion-textarea>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-textarea rows="3" cols="20" placeholder="Write Comment"></ion-textarea>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-textarea rows="3" cols="20" placeholder="Write Comment"></ion-textarea>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid *ngIf="edit_status">
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button class="btn-market" expand="full">Save</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,49 @@
+ion-header {
+    background-image: url('../../assets/images/bg-header.png');
+    background-size: cover;
+}
+
+ion-title {
+    text-align: center;
+    color: #fff;
+    font-family: "Century Gothic Regular", sans-serif !important;
+}
+
+ion-buttons ion-icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+ion-item {
+    margin-right: 15px;
+    --inner-padding-end: 0px;
+}
+
+ion-grid {
+    .appointment_reminder {
+        font-size: 15px;
+        font-weight: 500;
+        color: #4c4c4c;
+    }
+    .appointment_date {
+        color: #929292;
+        font-size: 14px;
+    }
+    .appointment_status {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+ion-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.st_pending {
+    color: #ff9c00;
+}
+
+.st_close {
+    color: #e30000;
+}

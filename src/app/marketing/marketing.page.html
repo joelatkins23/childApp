@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar [ngClass]="pt_active? 'ios_active':'ad_active'">
+        <ion-buttons slot="start" (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-buttons>
+        <ion-title>Marketing</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list class="market">
+        <ion-text class="market_header">
+            Send us a message!
+        </ion-text>
+    </ion-list>
+    <ion-list class="market mt-20">
+        <ion-text class="market_title">
+            How is the app working ?
+        </ion-text>
+        <ion-textarea class="market_textarea" rows="6" cols="20" placeholder="Write Comment"></ion-textarea>
+    </ion-list>
+    <ion-list class="market mt-20">
+        <ion-text class="market_title">
+            What do you expect from the app ?
+        </ion-text>
+        <ion-textarea class="market_textarea" rows="6" cols="20" placeholder="Write Comment"></ion-textarea>
+    </ion-list>
+    <ion-list class="market mt-20">
+        <ion-button class="btn-market" expand="block">Submit</ion-button>
+    </ion-list>
+</ion-content>
